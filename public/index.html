@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rapid Quest — Chat</title>
+  <link rel="stylesheet" href="/app.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <h2>Rapid Quest</h2>
+      <label>
+        Your name:
+        <input id="sender" placeholder="e.g. tiru" />
+      </label>
+      <label>
+        Chat with:
+        <input id="receiver" placeholder="e.g. zuck" />
+      </label>
+      <button id="joinBtn">Join</button>
+      <hr />
+      <div class="hint">Open two browser windows and set sender/receiver swapped to test real-time.</div>
+    </aside>
+
+    <main class="chat">
+      <div class="chat-header">
+        <div id="chatTitle">Not connected</div>
+        <div id="typingStatus" class="typing"></div>
+      </div>
+
+      <div id="messages" class="messages"></div>
+
+      <div class="composer">
+        <input id="content" placeholder="Type a message..." />
+        <button id="sendBtn">Send</button>
+      </div>
+    </main>
+  </div>
+  <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
